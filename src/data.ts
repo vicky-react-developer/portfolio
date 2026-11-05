@@ -126,7 +126,6 @@ export const projects: Project[] = [
     ],
     links: [
       { label: "Live demo", href: "https://lingorefresh.in" },
-      { label: "Source code [add link]", href: "https://github.com/[yourusername]/lingorefresh" },
     ],
   },
 ];
