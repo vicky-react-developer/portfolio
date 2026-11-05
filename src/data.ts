@@ -1,7 +1,7 @@
 // Edit this file to update the whole site. Replace everything in [brackets].
 
 export const profile = {
-  name: "Vignesh",
+  name: "VIGNESH B",
   role: "React Developer",
   email: "vigneshbaskaran7531@gmail.com",
   phone: "+91 7339088157",
