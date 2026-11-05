@@ -2,18 +2,21 @@
 
 export const profile = {
   name: "VIGNESH B",
-  role: "React Developer",
+  role: "MERN Stack Developer",
+  openTo: "MERN Stack, Full Stack, React and React Native roles",
   email: "vigneshbaskaran7531@gmail.com",
   phone: "+91 7339088157",
   linkedin: "https://www.linkedin.com/in/vignesh-b-835a79187",
   github: "https://github.com/vicky-react-developer",
   headline: "I build the whole product, screen to server.",
   lead: [
-    "Four years of shipping ",
-    { b: "React and React Native" },
-    " apps with ",
-    { b: "Node.js and Express" },
-    " backends. A hospital platform with payments, video and calendar sync. A four-app taxi system. An AI English coach.",
+    "Four years of building full-stack apps with the ",
+    { b: "MERN stack" },
+    ", ",
+    { b: "React Native" },
+    " and ",
+    { b: "Node.js" },
+    ". A hospital platform with payments, video and calendar sync. A four-app taxi system. An AI English coach.",
   ] as (string | { b: string })[],
 };
 
@@ -61,7 +64,7 @@ export const projects: Project[] = [
       { label: "Google Calendar", text: "one-way and two-way sync, with drag-and-drop rescheduling." },
       { label: "Widgets", text: "appointment and contact widgets that hospitals embed on their own sites." },
     ],
-    stack: ["React", "TypeScript", "Node.js", "Express.js", "MySQL", "Socket.IO", "Twilio", "JWT"],
+    stack: ["React", "TypeScript", "Node.js", "Express.js", "MySQL", "Sequelize", "Socket.IO", "Twilio", "JWT"],
     lifecycle: true,
     screens: [
       { src: "/screens/iboost-calendar.webp", kind: "web", width: 1200, height: 633, alt: "Weekly doctor calendar with appointments and busy slots from Google Calendar", caption: "Calendar with two-way Google sync and drag-and-drop rescheduling" },
@@ -112,7 +115,7 @@ export const projects: Project[] = [
       { label: "Voice input", text: "speak answers in English or Tamil, with progress saved for every task." },
       { text: "Full-stack development and deployment on a VPS." },
     ],
-    stack: ["React", "TypeScript", "Node.js", "Express.js", "RTK Query", "MySQL", "Gemini API", "JWT"],
+    stack: ["React", "TypeScript", "Node.js", "Express.js", "RTK Query", "MySQL", "Sequelize", "Gemini API", "JWT"],
     screens: [
       { src: "/screens/lingo-home.webp", kind: "phone", width: 600, height: 1083, alt: "LingoRefresh home screen with four speaking practice modes", caption: "Four practice modes" },
       { src: "/screens/lingo-tasks.webp", kind: "phone", width: 600, height: 1083, alt: "Task list with progress bars for each task", caption: "Tasks with saved progress" },
@@ -148,10 +151,11 @@ export const experience = {
 };
 
 export const skills = [
+  { group: "Core stack", items: "MERN (MongoDB, Express.js, React, Node.js), React Native, TypeScript" },
   { group: "Frontend", items: "React, JavaScript (ES6+), TypeScript, HTML5, CSS3, Redux Toolkit, RTK Query, Redux" },
   { group: "Mobile", items: "React Native" },
   { group: "Backend", items: "Node.js, Express.js, REST APIs, JWT Authentication, Socket.IO" },
-  { group: "Databases", items: "MySQL, MongoDB" },
+  { group: "Databases", items: "MySQL (via Sequelize ORM), MongoDB" },
   { group: "Integrations", items: "Authorize.net, Google Calendar API, Twilio, Gemini API" },
   { group: "Tools", items: "Git, GitHub, VPS deployment" },
 ];

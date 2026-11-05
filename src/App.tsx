@@ -96,7 +96,7 @@ export default function App() {
       </section>
 
       <section id="contact" className="contact">
-        <span className="label">Open to React Developer roles</span>
+        <span className="label">Open to {profile.openTo}</span>
         <h2>Contact</h2>
         <div className="big">{profile.email}</div>
         <ul>
