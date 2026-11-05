@@ -1,28 +1,75 @@
-# React Developer Portfolio
+# React + TypeScript + Vite
 
-Vite + React 18 + TypeScript. Light and dark themes follow the visitor's system setting.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Run it
+Currently, two official plugins are available:
 
-```bash
-npm install
-npm run dev      # local dev server
-npm run build    # production build in dist/
-npm run preview  # preview the production build
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+
 ```
 
-## Edit your content
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-All text lives in `src/data.ts`. Replace everything in [brackets]: name, email, phone, LinkedIn, GitHub and the LingoRefresh links. Colors and fonts are tokens at the top of `src/index.css`.
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## Deploy (free)
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
-**Vercel or Netlify:** push this folder to GitHub, import the repo, and use the defaults (build command `npm run build`, output folder `dist`).
-
-**GitHub Pages:** add `base: "/your-repo-name/"` to `vite.config.ts`, run `npm run build`, and publish the `dist` folder.
-
-## Before you publish
-
-- Confirm your employer allows you to describe IBoost and Zebu Taxi publicly.
-- Never add credentials, test logins or internal URLs to this site.
-- Update the `<title>` and description in `index.html`.
+```
