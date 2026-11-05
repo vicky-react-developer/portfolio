@@ -2,20 +2,20 @@
 
 export const profile = {
   name: "VIGNESH B",
-  role: "MERN Stack Developer",
-  openTo: "MERN Stack, Full Stack, React and React Native roles",
+  role: "Full Stack Developer",
+  openTo: "Full Stack, MERN Stack, React and React Native roles",
   email: "vigneshbaskaran7531@gmail.com",
   phone: "+91 7339088157",
   linkedin: "https://www.linkedin.com/in/vignesh-b-835a79187",
   github: "https://github.com/vicky-react-developer",
   headline: "I build the whole product, screen to server.",
   lead: [
-    "Four years of building full-stack apps with the ",
-    { b: "MERN stack" },
+    "Four years of building full-stack apps with ",
+    { b: "React" },
     ", ",
-    { b: "React Native" },
-    " and ",
     { b: "Node.js" },
+    " and ",
+    { b: "React Native" },
     ". A hospital platform with payments, video and calendar sync. A four-app taxi system. An AI English coach.",
   ] as (string | { b: string })[],
 };
@@ -150,7 +150,7 @@ export const experience = {
 };
 
 export const skills = [
-  { group: "Core stack", items: "MERN (MongoDB, Express.js, React, Node.js), React Native, TypeScript" },
+  { group: "Core stack", items: "React, Node.js, Express.js, MySQL (Sequelize), MongoDB, React Native, TypeScript" },
   { group: "Frontend", items: "React, JavaScript (ES6+), TypeScript, HTML5, CSS3, Redux Toolkit, RTK Query, Redux" },
   { group: "Mobile", items: "React Native" },
   { group: "Backend", items: "Node.js, Express.js, REST APIs, JWT Authentication, Socket.IO" },
