@@ -145,6 +145,7 @@ export const experience = {
     [{ text: "Own features end to end on " }, { text: "web and mobile", bold: true }, { text: ", from React and React Native screens to Node.js APIs and database design." }],
     [{ text: "Built a hospital appointment platform with " }, { text: "payments, encrypted chat, video calls and calendar sync", bold: true }, { text: "." }],
     [{ text: "Migrated a taxi platform backend from " }, { text: "Firebase to MongoDB", bold: true }, { text: " and sped up driver matching." }],
+    [{ text: "Integrated " }, { text: "push notifications", bold: true }, { text: " with Firebase Cloud Messaging on web, Android and iOS (APNs), added " }, { text: "Google Sign-In", bold: true }, { text: " on both mobile platforms and " }, { text: "published apps to the App Store", bold: true }, { text: "." }],
     [{ text: "Secure every API with " }, { text: "JWT authentication", bold: true }, { text: " across all projects." }],
   ] as { text: string; bold?: boolean }[][],
 };
@@ -152,7 +153,7 @@ export const experience = {
 export const skills = [
   { group: "Core stack", items: "React, Node.js, Express.js, MySQL (Sequelize), MongoDB, React Native, TypeScript" },
   { group: "Frontend", items: "React, JavaScript (ES6+), TypeScript, HTML5, CSS3, Redux Toolkit, RTK Query, Redux" },
-  { group: "Mobile", items: "React Native" },
+  { group: "Mobile", items: "React Native, Push Notifications (Firebase Cloud Messaging, APNs), Google Sign-In, App Store publishing" },
   { group: "Backend", items: "Node.js, Express.js, REST APIs, JWT Authentication, Socket.IO" },
   { group: "Databases", items: "MySQL (via Sequelize ORM), MongoDB" },
   { group: "Integrations", items: "Authorize.net, Google Calendar API, Twilio, Gemini API" },
